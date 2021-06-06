@@ -22,11 +22,14 @@ namespace Game
         int enemynum = 5;
         Random random = new Random();
         int score = 0;
+        public Character character { get; set; }
+        
 
         public Form1()
         {
             InitializeComponent();
             musicPlayer.URL = "pokemonThemeSong.mp3";
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +42,8 @@ namespace Game
             timerGame.Interval = 150;
             score = 0;
             labelScore.Text = "" + score;
-            
+            pokemon.BackgroundImage = Character.character;
+
             for (int i=0; i<enemynum; i++)
             {
                 enemyballs[i] = new PictureBox();
@@ -107,6 +111,7 @@ namespace Game
                     pokemon.Left += playerMovement;
                 }
             }
+            
             pokemon.SendToBack();
         }
 
@@ -136,6 +141,7 @@ namespace Game
                 {
                     timerGame.Enabled = false;
                     MessageBox.Show("Game Over");
+                    
                 }
 
                 if(enemyballs[i].Top + enemyballs[i].Height > this.ClientRectangle.Height)
