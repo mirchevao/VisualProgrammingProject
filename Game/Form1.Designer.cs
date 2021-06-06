@@ -66,7 +66,6 @@
             // pokemon
             // 
             this.pokemon.BackColor = System.Drawing.Color.Transparent;
-            this.pokemon.BackgroundImage = global::Game.Properties.Resources.characterBulbasaur;
             this.pokemon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pokemon.Location = new System.Drawing.Point(478, 584);
             this.pokemon.Name = "pokemon";
