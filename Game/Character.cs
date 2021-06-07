@@ -14,6 +14,7 @@ namespace Game
     {
         public Form1 form { get; set; }
         public static Image character { get; set; }
+        public int i = 0;
 
         public Character()
         {
@@ -34,16 +35,35 @@ namespace Game
         }
 
         private void Character_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Right)
-            {
-                pic_character.Image = Properties.Resources.characterCharmander;
-                
-            } else if (e.KeyCode == Keys.Left)
-            {
-                pic_character.Image = Properties.Resources.characterBulbasaur;
+        { 
 
+            Image[] images = new Image[3];
+            images[0] = Properties.Resources.characterBulbasaur;
+            images[1] = Properties.Resources.characterCharmander;
+            images[2] = Properties.Resources.characterSquirtle;
+
+
+            if (e.KeyCode == Keys.Right)
+            {
+                i++;
+                if (i > 2)
+                {
+                    i = 0;
+                }
+                pic_character.Image = images[i];
+                
             }
+            else if (e.KeyCode == Keys.Left)
+            {
+                i--;
+                if (i < 0)
+                {
+                    i = 2;
+                }
+                pic_character.Image = images[i];
+                
+            }
+
             character = pic_character.Image;
 
         }
