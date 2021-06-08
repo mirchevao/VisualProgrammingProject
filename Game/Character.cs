@@ -16,7 +16,7 @@ namespace Game
         public static Image character { get; set; }
         public int i = 0;
         // 1- easy 2- medium 3- hard
-        public static int level = 0;
+        public static int level = 1;
 
 
         public Character()
