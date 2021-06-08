@@ -15,11 +15,15 @@ namespace Game
         public Form1 form { get; set; }
         public static Image character { get; set; }
         public int i = 0;
+        // 1- easy 2- medium 3- hard
+        public static int level = 0;
+
 
         public Character()
         {
             InitializeComponent();
             form = new Form1();
+            character = Properties.Resources.characterBulbasaur;
         }
 
         private void btn_start_Paint(object sender, PaintEventArgs e)
@@ -66,6 +70,51 @@ namespace Game
 
             character = pic_character.Image;
 
+        }
+
+        private void btnEasy_Click(object sender, EventArgs e)
+        {
+            level = 1;
+        }
+
+        private void btnMedium_Click(object sender, EventArgs e)
+        {
+            level = 2;
+        }
+
+        private void btnHard_Click(object sender, EventArgs e)
+        {
+            level = 3;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void panel5_MouseClick(object sender, MouseEventArgs e)
+        {
+            level = 3;
+        }
+
+        private void panel4_MouseClick(object sender, MouseEventArgs e)
+        {
+            level = 2;
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            level = 1;
         }
     }
 }

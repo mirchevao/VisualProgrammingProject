@@ -19,7 +19,7 @@ namespace Game
         PictureBox masterball;
         int[] enemyspeed;
         int masterballspeed;
-        int enemynum = 5;
+        int enemynum;
         Random random = new Random();
         int score = 0;
         public Character character { get; set; }
@@ -29,11 +29,24 @@ namespace Game
         {
             InitializeComponent();
             musicPlayer.URL = "pokemonThemeSong.mp3";
+            
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (Character.level == 1)
+            {
+                enemynum = 5;
+            }
+            else if (Character.level == 2)
+            {
+                enemynum = 10;
+            }
+            else if (Character.level == 3)
+            {
+                enemynum = 15;
+            }
             musicPlayer.controls.play();
             enemyballs = new PictureBox[enemynum];
             enemyspeed = new int[enemynum];
