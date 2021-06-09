@@ -116,5 +116,10 @@ namespace Game
         {
             level = 1;
         }
+
+        private void Character_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

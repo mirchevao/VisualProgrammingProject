@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Character));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,37 +39,49 @@
             this.pic_character = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_character)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(179, 52);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(23, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(417, 48);
+            this.label1.Size = new System.Drawing.Size(542, 54);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Choose your charcter";
+            this.label1.Text = "Choose your Pokemon";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(728, 52);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label2.Location = new System.Drawing.Point(716, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(302, 48);
+            this.label2.Size = new System.Drawing.Size(404, 54);
             this.label2.TabIndex = 5;
             this.label2.Text = "Select difficulty";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = global::Game.Properties.Resources.close;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Location = new System.Drawing.Point(571, 451);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(171, 51);
+            this.panel6.TabIndex = 4;
+            // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::Game.Properties.Resources.medium1;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(827, 236);
+            this.panel4.Location = new System.Drawing.Point(865, 253);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(117, 51);
             this.panel4.TabIndex = 5;
@@ -77,9 +90,10 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BackgroundImage = global::Game.Properties.Resources.hard1;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(827, 310);
+            this.panel5.Location = new System.Drawing.Point(865, 325);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(117, 51);
             this.panel5.TabIndex = 5;
@@ -88,9 +102,10 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::Game.Properties.Resources.easy1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(827, 166);
+            this.panel1.Location = new System.Drawing.Point(865, 183);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(117, 51);
             this.panel1.TabIndex = 4;
@@ -99,9 +114,10 @@
             // 
             // btn_start
             // 
+            this.btn_start.BackColor = System.Drawing.Color.Transparent;
             this.btn_start.BackgroundImage = global::Game.Properties.Resources.start;
             this.btn_start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_start.Location = new System.Drawing.Point(408, 451);
+            this.btn_start.Location = new System.Drawing.Point(394, 451);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(171, 51);
             this.btn_start.TabIndex = 3;
@@ -110,8 +126,9 @@
             // 
             // pic_character
             // 
+            this.pic_character.BackColor = System.Drawing.Color.Transparent;
             this.pic_character.Image = global::Game.Properties.Resources.characterBulbasaur;
-            this.pic_character.Location = new System.Drawing.Point(300, 123);
+            this.pic_character.Location = new System.Drawing.Point(189, 200);
             this.pic_character.Name = "pic_character";
             this.pic_character.Size = new System.Drawing.Size(171, 152);
             this.pic_character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,37 +137,31 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(529, 166);
+            this.panel3.Location = new System.Drawing.Point(394, 239);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(83, 75);
             this.panel3.TabIndex = 2;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::Game.Properties.Resources.left_red;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(160, 166);
+            this.panel2.Location = new System.Drawing.Point(69, 239);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(85, 75);
             this.panel2.TabIndex = 1;
             // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::Game.Properties.Resources.close;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Location = new System.Drawing.Point(650, 451);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(171, 51);
-            this.panel6.TabIndex = 4;
-            // 
             // Character
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1282, 581);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.NavajoWhite;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1062, 673);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
@@ -161,9 +172,13 @@
             this.Controls.Add(this.pic_character);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.DoubleBuffered = true;
+            this.MaximumSize = new System.Drawing.Size(1080, 720);
+            this.MinimumSize = new System.Drawing.Size(1080, 720);
             this.Name = "Character";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Character";
+            this.Text = "Character Select";
+            this.Load += new System.EventHandler(this.Character_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Character_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pic_character)).EndInit();
             this.ResumeLayout(false);
