@@ -13,7 +13,6 @@ namespace Game
 {
     public partial class Form1 : Form
     {
-        WindowsMediaPlayer musicPlayer = new WindowsMediaPlayer();
         int playerMovement = 15;
         PictureBox[] enemyballs;
         PictureBox masterball;
@@ -28,8 +27,9 @@ namespace Game
         public Form1()
         {
             InitializeComponent();
-            musicPlayer.URL = "pokemonThemeSong.mp3";
-            
+            System.IO.Stream str = Properties.Resources.pokemonThemeSong;
+            System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
+            snd.Play();
 
         }
 
@@ -47,7 +47,6 @@ namespace Game
             {
                 enemynum = 15;
             }
-            musicPlayer.controls.play();
             enemyballs = new PictureBox[enemynum];
             enemyspeed = new int[enemynum];
 

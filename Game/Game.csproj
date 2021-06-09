@@ -186,5 +186,11 @@
   <ItemGroup>
     <None Include="Resources\hard1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\characterSelectWorld.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokemonThemeSong.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
