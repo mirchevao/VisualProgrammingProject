@@ -39,16 +39,17 @@
             this.pic_character = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.selectedLvlArrow = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_character)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectedLvlArrow)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(23, 67);
+            this.label1.Location = new System.Drawing.Point(66, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(542, 54);
             this.label1.TabIndex = 4;
@@ -60,7 +61,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(716, 67);
+            this.label2.Location = new System.Drawing.Point(665, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(404, 54);
             this.label2.TabIndex = 5;
@@ -71,17 +72,19 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.BackgroundImage = global::Game.Properties.Resources.close;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Location = new System.Drawing.Point(571, 451);
+            this.panel6.Location = new System.Drawing.Point(551, 529);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(171, 51);
             this.panel6.TabIndex = 4;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            this.panel6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseClick);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::Game.Properties.Resources.medium1;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(865, 253);
+            this.panel4.Location = new System.Drawing.Point(776, 263);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(117, 51);
             this.panel4.TabIndex = 5;
@@ -93,7 +96,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BackgroundImage = global::Game.Properties.Resources.hard1;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(865, 325);
+            this.panel5.Location = new System.Drawing.Point(776, 348);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(117, 51);
             this.panel5.TabIndex = 5;
@@ -105,7 +108,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::Game.Properties.Resources.easy1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(865, 183);
+            this.panel1.Location = new System.Drawing.Point(776, 177);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(117, 51);
             this.panel1.TabIndex = 4;
@@ -117,7 +120,7 @@
             this.btn_start.BackColor = System.Drawing.Color.Transparent;
             this.btn_start.BackgroundImage = global::Game.Properties.Resources.start;
             this.btn_start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_start.Location = new System.Drawing.Point(394, 451);
+            this.btn_start.Location = new System.Drawing.Point(328, 529);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(171, 51);
             this.btn_start.TabIndex = 3;
@@ -128,7 +131,7 @@
             // 
             this.pic_character.BackColor = System.Drawing.Color.Transparent;
             this.pic_character.Image = global::Game.Properties.Resources.characterBulbasaur;
-            this.pic_character.Location = new System.Drawing.Point(189, 200);
+            this.pic_character.Location = new System.Drawing.Point(210, 207);
             this.pic_character.Name = "pic_character";
             this.pic_character.Size = new System.Drawing.Size(171, 152);
             this.pic_character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -140,20 +143,35 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(394, 239);
+            this.panel3.Location = new System.Drawing.Point(404, 251);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(83, 75);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseClick);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::Game.Properties.Resources.left_red;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(69, 239);
+            this.panel2.Location = new System.Drawing.Point(96, 251);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(85, 75);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
+            // 
+            // selectedLvlArrow
+            // 
+            this.selectedLvlArrow.BackColor = System.Drawing.Color.Transparent;
+            this.selectedLvlArrow.BackgroundImage = global::Game.Properties.Resources.selectedLvlArrow;
+            this.selectedLvlArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.selectedLvlArrow.Location = new System.Drawing.Point(725, 178);
+            this.selectedLvlArrow.Name = "selectedLvlArrow";
+            this.selectedLvlArrow.Size = new System.Drawing.Size(45, 50);
+            this.selectedLvlArrow.TabIndex = 6;
+            this.selectedLvlArrow.TabStop = false;
             // 
             // Character
             // 
@@ -162,6 +180,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1062, 673);
+            this.Controls.Add(this.selectedLvlArrow);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
@@ -181,6 +200,7 @@
             this.Load += new System.EventHandler(this.Character_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Character_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pic_character)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectedLvlArrow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +217,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox selectedLvlArrow;
     }
 }
