@@ -123,6 +123,16 @@ namespace Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exitMenuWorld {
+            get {
+                object obj = ResourceManager.GetObject("exitMenuWorld", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hard {
             get {
                 object obj = ResourceManager.GetObject("hard", resourceCulture);
@@ -225,6 +235,16 @@ namespace Game.Properties {
         internal static System.Drawing.Bitmap red_right {
             get {
                 object obj = ResourceManager.GetObject("red_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap selectedLvlArrow {
+            get {
+                object obj = ResourceManager.GetObject("selectedLvlArrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

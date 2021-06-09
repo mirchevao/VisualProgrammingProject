@@ -58,10 +58,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExitMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExitMenu.Designer.cs">
+      <DependentUpon>ExitMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Character.resx">
       <DependentUpon>Character.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitMenu.resx">
+      <DependentUpon>ExitMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -191,6 +200,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pokemonThemeSong.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitMenuWorld.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectedLvlArrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

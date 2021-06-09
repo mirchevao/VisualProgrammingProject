@@ -62,6 +62,7 @@
             this.labelScore.Size = new System.Drawing.Size(39, 40);
             this.labelScore.TabIndex = 2;
             this.labelScore.Text = "X";
+            this.labelScore.Click += new System.EventHandler(this.labelScore_Click);
             // 
             // pokemon
             // 

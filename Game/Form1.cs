@@ -20,16 +20,20 @@ namespace Game
         int masterballspeed;
         int enemynum;
         Random random = new Random();
-        int score = 0;
+        public int score = 0;
         public Character character { get; set; }
+        public ExitMenu exitMenu { get; set; }
         
 
         public Form1()
         {
             InitializeComponent();
+
+            exitMenu = new ExitMenu();
+
             System.IO.Stream str = Properties.Resources.pokemonThemeSong;
             System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
-            snd.Play();
+            snd.PlayLooping();
 
         }
 
@@ -118,7 +122,7 @@ namespace Game
             }
             if (e.KeyCode == Keys.Right)
             {
-                if (pokemon.Left < 1040 - pokemon.Width)
+                if (pokemon.Left < 1060 - pokemon.Width)
                 {
                     pokemon.Left += playerMovement;
                 }
@@ -152,8 +156,11 @@ namespace Game
                 if (pokemon.Bounds.IntersectsWith(enemyballs[i].Bounds))
                 {
                     timerGame.Enabled = false;
-                    MessageBox.Show("Game Over");
-                    
+                 
+                    exitMenu.Closed += (s, args) => this.Close();
+                    exitMenu.Show();
+                    this.Hide();
+
                 }
 
                 if(enemyballs[i].Top + enemyballs[i].Height > this.ClientRectangle.Height)
@@ -178,6 +185,11 @@ namespace Game
                 masterball.Top = 0;
                 masterball.Left = random.Next(0, this.ClientRectangle.Width - masterball.Width);
             }
+        }
+
+        private void labelScore_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
