@@ -138,6 +138,7 @@ namespace Game
                 i = 0;
             }
             pic_character.Image = images[i];
+            character = pic_character.Image;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -153,6 +154,7 @@ namespace Game
                 i = 2;
             }
             pic_character.Image = images[i];
+            character = pic_character.Image;
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
