@@ -20,7 +20,7 @@ namespace Game
         int masterballspeed;
         int enemynum;
         Random random = new Random();
-        public int score = 0;
+        public static int score = 0;
         public Character character { get; set; }
         public ExitMenu exitMenu { get; set; }
         
