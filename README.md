@@ -74,7 +74,7 @@
 
 <br/>
 <img src="GameScreenshots/form_load.png" width="400">
-(сл6. Приказ на дел од функцијата *Form1_Load()*)
+(сл6. Приказ на дел од функцијата Form1_Load())
 <br/>
 
 ### 3.3) Exit Menu Form<br/>
